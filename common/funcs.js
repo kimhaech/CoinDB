@@ -1,5 +1,5 @@
-const calendar = require('./calendar')
-
+const dict = require('./calendar')
+const calendar = dict.calendar
 // 시작 일자로 부터 h일 전의 날짜값 반환
 function get_beforedate(y, m, d, h) {
     let b = d - h // 기준 일 - h일 전

@@ -6,7 +6,7 @@ const { get_beforedate, get_period_data} = require('../common/funcs')
 const today = [2022, 5, 14]
 
 // for speedometer
-router.get('/', async (req, res, next) => {
+router.get('/', (req, res, next) => {
     const CostSchema = mySchemas.BITCOIN;
     CostSchema.find({}).then((docs, err) => {
         const a_day_ago = get_beforedate(today[0], today[1], today[2], 1)
@@ -56,7 +56,7 @@ router.get('/', async (req, res, next) => {
             ),
         }
         res.send(JSON.stringify(speedometer))
-    })
+    }).catch(err => console.log(err))
 })
 
 module.exports = router;

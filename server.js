@@ -1,10 +1,12 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 require('dotenv/config')
 const spdRouter = require('./routes/speedometer')
 const chartRouter = require('./routes/chart')
 const rankRouter = require('./routes/rank')
 const mongoose = require("mongoose");
+app.use(cors())
 
 // DB Connection
 mongoose
@@ -20,9 +22,9 @@ mongoose
     })
 
 app.use('/spd', spdRouter)
-// app.use('/chart', chartRouter)
-// app.use('/rank', rankRouter)
-//
+app.use('/chart', chartRouter)
+app.use('/rank', rankRouter)
+
 app.use(function(req, res, next) {
     if(req.url === '/' || req.uri === '/') {
         res.send('OK');
