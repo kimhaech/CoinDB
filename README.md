@@ -9,3 +9,5 @@ cors, express, mongoose, dotenv
 ### 설명
 data -> 학습, 분석 데이터  
 models -> db 스키마
+routes -> 각 router
+실행 -> sever.js
