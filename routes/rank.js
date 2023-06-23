@@ -37,38 +37,6 @@ async function saveCoinlist(models, td, COINS) {
         })
     }
 }
-// BITCOIN.find({date: td}, function (err, docs) {
-//     const temp = new COINS({
-//         today: td,
-//         name: 'BITCOIN',
-//         arr: get_vol_gfs(docs, td),
-//     })
-//     COINS.deleteOne({name: 'BITCOIN'}).then(() => {
-//         console.log('delete')
-//     })
-//     temp
-//         .save()
-//         .then(() => {
-//             console.log('코인 정보 저장 성공')
-//         })
-//         .catch((err) => {
-//             console.log(err)
-//         })
-// })
-
-// const BITCOIN = mySchemas.BITCOIN
-// const ADA = mySchemas.ADA
-// const ANKR = mySchemas.ANKR
-// const DOGECOIN = mySchemas.DOGECOIN
-// const EOS = mySchemas.EOS
-// const ETC = mySchemas.ETC
-// const ETH = mySchemas.ETH
-// const IOTA = mySchemas.IOTA
-// const POLYGON = mySchemas.POLYGON
-// const WAVES = mySchemas.WAVES
-// const XRP = mySchemas.XRP
-// const ZILLIQA = mySchemas.ZILLIQA
-// const SOL = mySchemas.SOL
 
 router.get('/', async (req, res, next) => {
     let models = {}
