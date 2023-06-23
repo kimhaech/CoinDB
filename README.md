@@ -11,3 +11,6 @@ data -> 학습, 분석 데이터
 models -> db 스키마  
 routes -> 각 router  
 실행 -> sever.js  
+
+### 최종 수정
+230623 : 구조변경, 분리
